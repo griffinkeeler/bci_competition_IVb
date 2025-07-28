@@ -1,0 +1,26 @@
+# Virtual Enviornment
+.venv/
+venv/
+env
+
+# PyCharm Files
+.idea/
+
+# Compiled Files
+__pychache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOs
+.DS_Store
+
+# Logs of models (optional)
+*.log
+models/
+data/processed/
+
+# Ignore Raw EEG Files
+data/
+raw/
