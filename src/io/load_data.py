@@ -79,5 +79,3 @@ def load_channel_labels(filepath: str):
 
     # Returns the labels as a list
     return [str(ch[0]) for ch in channels]
-
-
