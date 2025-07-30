@@ -10,15 +10,18 @@ def load_eeg_data(filepath:str):
         filepath (str): The path to the file.
 
     Returns:
-         cnt (ndarray): The continuous EEG signals with
-          shape [time x channels].
+         cnt (ndarray): The continuous EEG signals of
+          shape (channels x time).
     """
     # Loads the file
     file = loadmat(filepath)
 
     # Converts the datatype from INT16 to a float
     # Converted to microvolts for MNE
-    return file['cnt'].astype('float32') * 0.1
+    data = file['cnt'].astype('float32') * 0.1
+
+    # Transposes the shape to (n_channels, n_samples) for MNE
+    return data.T
 
 
 def load_info(filepath: str):
